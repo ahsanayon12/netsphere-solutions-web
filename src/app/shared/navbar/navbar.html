@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <div class="container">
+    <a class="brand" routerLink="/">
+  <span class="logo" aria-label="Netsphere Logo">
+  <img src="assets/logo.png" alt="Netsphere Solutions Limited Logo" height="36" style="vertical-align: middle; max-width: 120px; max-height: 36px; object-fit: contain;" />
+</span>
+  Netsphere Solutions Limited
+</a>
+    <ul class="nav-links">
+  <li><a href="#" (click)="$event.preventDefault(); scrollToTop(); sectionSelect.emit(null);">Home</a></li>
+  <li><a href="#about" (click)="$event.preventDefault(); sectionSelect.emit('about')">About</a></li>
+  <li><a href="#solutions" (click)="$event.preventDefault(); sectionSelect.emit('solutions')">Solutions</a></li>
+  <li><a href="#contact" (click)="$event.preventDefault(); sectionSelect.emit('contact')">Contact</a></li>
+</ul>
+  </div>
+</nav>

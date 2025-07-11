@@ -1,0 +1,81 @@
+<app-navbar (sectionSelect)="showSection($event)"></app-navbar>
+
+<div class="app-content">
+  <!-- Home Section (always visible) -->
+  <section class="hero">
+    <div class="container">
+      <h1>Empowering Your Digital Future</h1>
+      <p>IT Solutions, Cloud, and Digital Transformation for Ambitious Businesses</p>
+      <button class="cta-btn" (click)="showSection('solutions')">Explore Solutions</button>
+    </div>
+  </section>
+
+  <!-- Dropdown Sections -->
+  <section class="dropdown-section about" *ngIf="activeSection === 'about'" [@dropdown]>
+    <div class="container">
+      <h1>About Netsphere Solutions Limited Limited</h1>
+      <p>Netsphere Solutions Limited Limited is dedicated to empowering innovation and driving digital transformation for businesses of all sizes. Inspired by global leaders, we deliver IT hardware, cloud, cybersecurity, analytics, and consulting services tailored to your unique needs.</p>
+      <h2>Our Mission</h2>
+      <p>To be the trusted partner for organizations seeking to modernize, secure, and optimize their technology landscape.</p>
+      <h2>Our Values</h2>
+      <ul>
+        <li>Customer-Centricity & Integrity</li>
+        <li>Innovation & Excellence</li>
+        <li>Sustainability & Responsibility</li>
+        <li>Collaboration & Teamwork</li>
+      </ul>
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>Expertise across IT lifecycle</li>
+        <li>Flexible, scalable solutions</li>
+        <li>24/7 expert support</li>
+        <li>Commitment to sustainability</li>
+      </ul>
+    </div>
+  </section>
+
+  <app-solutions *ngIf="activeSection === 'solutions'" [@dropdown]></app-solutions>
+
+  <section class="dropdown-section contact" *ngIf="activeSection === 'contact'" [@dropdown]>
+    <div class="container">
+      <h1>Contact Netsphere Solutions Limited Limited</h1>
+      <p>Ready to discuss your project or need more information? Reach out to us today!</p>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your Name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="Your Email" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="How can we help you?"></textarea>
+        </div>
+        <button type="submit" disabled>Send Message (Coming Soon)</button>
+      </form>
+      <div class="contact-info">
+        <h2>Company Info</h2>
+        <ul>
+          <li>Email: support&#64;netspheresolutionsltd.com</li>
+          <li>Phone: +880 1643044160</li>
+          <li>Address: Dhaka, Bangladesh</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<app-footer></app-footer>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+

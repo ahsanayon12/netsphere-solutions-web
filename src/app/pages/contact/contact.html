@@ -1,0 +1,62 @@
+<app-header-banner [image]="'assets/images/headers/contact-header.jpg'" title="Contact Us" subtitle="Let's Connect & Grow Together"></app-header-banner>
+<section class="contact">
+  <div class="container">
+    <h1>Contact Netsphere Solutions Limited</h1>
+    <p>Ready to discuss your project or need more information? Reach out to us today!</p>
+    
+    <div class="contact-methods">
+      <div class="contact-form-section">
+        <h2>Send us a Message</h2>
+        <p class="form-description">Fill out the form below and we'll get back to you as soon as possible!</p>
+        
+        <form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your Name" required [(ngModel)]="name" #nameModel="ngModel" />
+            <div *ngIf="nameModel.invalid && nameModel.touched" class="error">Name is required.</div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Your Email" required email [(ngModel)]="email" #emailModel="ngModel" />
+            <div *ngIf="emailModel.invalid && emailModel.touched" class="error">Valid email is required.</div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="How can we help you?" required [(ngModel)]="message" #messageModel="ngModel"></textarea>
+            <div *ngIf="messageModel.invalid && messageModel.touched" class="error">Message is required.</div>
+          </div>
+          <button type="submit" [disabled]="contactForm.invalid" class="submit-btn">
+            <i class="fas fa-paper-plane"></i>
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <div class="contact-info-section">
+        <div class="contact-info">
+          <h2>Company Info</h2>
+          <ul>
+            <li><i class="fas fa-envelope"></i> Email: support&#64;netspheresolutionsltd.com</li>
+            <li><i class="fas fa-phone"></i> Phone: +880 1643044160</li>
+            <li><i class="fas fa-map-marker-alt"></i> Address: Dhaka, Bangladesh</li>
+          </ul>
+        </div>
+
+        <div class="social-media">
+          <h2>Follow Us</h2>
+          <p>Connect with us on social media for updates and insights!</p>
+          <div class="social-links">
+            <a href="#" (click)="openFacebook(); $event.preventDefault()" class="social-link facebook">
+              <i class="fab fa-facebook-f"></i>
+              <span>Facebook</span>
+            </a>
+            <a href="#" (click)="openLinkedIn(); $event.preventDefault()" class="social-link linkedin">
+              <i class="fab fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

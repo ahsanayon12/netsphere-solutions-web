@@ -1,0 +1,407 @@
+$primary: #1a2956;
+$accent: #2bb1e0;
+$accent2: #7e5bef;
+$success: #33c48c;
+$danger: #e04f5f;
+$light-bg: #f4f7fa;
+$card-bg: #fff;
+$border: #e0e7ef;
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, $light-bg 0%, #e0e7ef 50%, #c3cfe2 100%);
+  color: $primary;
+  font-size: 16px;
+  line-height: 1.6;
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+h1, h2, h3, h4 {
+  color: $primary;
+  font-weight: 700;
+}
+
+h1 {
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
+}
+
+h2 {
+  color: $accent2;
+  
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+  }
+}
+
+h3 {
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
+}
+
+a, .link {
+  color: $accent;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+a:hover, .link:hover {
+  color: $accent2;
+}
+
+.cta-btn, button, input[type="submit"] {
+  background: linear-gradient(90deg, $accent 70%, $accent2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(43,177,224,0.08);
+  
+  @media (max-width: 768px) {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+.cta-btn:hover, button:hover, input[type="submit"]:hover {
+  background: linear-gradient(90deg, $accent2 70%, $accent 100%);
+}
+
+.card, .service-item, .contact-form, .about-preview, .solutions-preview {
+  background: $card-bg;
+  border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(26,41,86,0.06);
+  border: 1px solid $border;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  
+  @media (max-width: 768px) {
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+section {
+  margin-bottom: 2.5rem;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.navbar {
+  background: $primary;
+  color: #fff;
+  padding: 0.8rem 0;
+  box-shadow: 0 2px 10px rgba(26,41,86,0.08);
+  
+  @media (max-width: 768px) {
+    padding: 0.6rem 0;
+  }
+  
+  .brand, .logo, .company-name {
+    color: #fff;
+  }
+  .nav-links a {
+    color: #fff;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: border 0.2s, color 0.2s;
+    
+    @media (max-width: 768px) {
+      margin-left: 1rem;
+    }
+    
+    @media (max-width: 480px) {
+      margin-left: 0.5rem;
+    }
+  }
+  .nav-links a:hover, .nav-links a.active {
+    color: $accent;
+    border-bottom: 2px solid $accent;
+  }
+}
+
+.footer {
+  background: $primary;
+  color: #fff;
+  padding: 2rem 0 1rem 0;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem 0 1rem 0;
+  }
+  
+  .footer-content, .footer-brand, .footer-nav a, .company-name {
+    color: #fff;
+  }
+  .footer-nav a {
+    margin-right: 1.5rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    
+    @media (max-width: 768px) {
+      margin-right: 1rem;
+    }
+    
+    @media (max-width: 480px) {
+      margin-right: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  .footer-nav a:hover {
+    color: $accent;
+  }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    font-size: 0.95rem;
+    color: #e0e7ef;
+    
+    @media (max-width: 480px) {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+input, textarea {
+  border: 1px solid $border;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  color: $primary;
+  transition: border 0.2s;
+  
+  @media (max-width: 768px) {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: $accent2;
+}
+
+.contact-form label {
+  color: $accent2;
+  font-weight: 600;
+  
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+}
+
+.contact-form button, .contact-form input[type="submit"] {
+  margin-top: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 1rem;
+  }
+}
+
+.contact-info {
+  background: rgba(43,177,224,0.08);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  color: $primary;
+  
+  @media (max-width: 768px) {
+    padding: 0.8rem 1.2rem;
+    margin-top: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.6rem 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.app-content {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0 0.8rem;
+  }
+}
+
+// Responsive grid for services
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+}
+
+.service-item {
+  background: $card-bg;
+  border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(26,41,86,0.06);
+  border: 1px solid $border;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(26,41,86,0.1);
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1.2rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
+}
+
+// Hero section responsive styles
+.hero {
+  text-align: center;
+  padding: 3rem 0;
+  
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem 0;
+  }
+}
+
+// About preview section
+.about-preview {
+  text-align: center;
+  padding: 2rem 0;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem 0;
+  }
+}
+
+// Solutions preview section
+.solutions-preview {
+  padding: 2rem 0;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem 0;
+  }
+}
+
+// Contact CTA section
+.contact-cta {
+  text-align: center;
+  padding: 2rem 0;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem 0;
+  }
+}
+
+// Home page background image class
+.hero-bg {
+  background: linear-gradient(135deg, rgba(26, 41, 86, 0.8), rgba(43, 177, 224, 0.6)), url('assets/images/headers/background.jpg') center/cover no-repeat !important;
+}
+
+/* Background image section styles */
+.hero-section {
+  background: linear-gradient(rgba(20,40,80,0.6), rgba(20,40,80,0.4)), url('assets/images/backgrounds/hero-bg.jpg') center/cover no-repeat;
+}
+
+.hardware-section {
+  background: linear-gradient(rgba(10,20,40,0.6), rgba(10,20,40,0.4)), url('assets/images/backgrounds/hardware-bg.jpg') center/cover no-repeat;
+}
+
+.cloud-section {
+  background: linear-gradient(rgba(40,80,160,0.4), rgba(40,80,160,0.2)), url('assets/images/backgrounds/cloud-bg.jpg') center/cover no-repeat;
+}
+
+.cybersecurity-section {
+  background: linear-gradient(rgba(10,20,40,0.7), rgba(10,20,40,0.7)), url('assets/images/backgrounds/cybersecurity-bg.jpg') center/cover no-repeat;
+}
+
+.consulting-section {
+  background: linear-gradient(rgba(30,60,120,0.4), rgba(30,60,120,0.2)), url('assets/images/backgrounds/consulting-bg.jpg') center/cover no-repeat;
+}
